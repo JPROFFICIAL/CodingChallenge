@@ -16,7 +16,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var transactions = [Transactions]()
     var inSearchMode = false
     var filteredTransactions = [Transactions]()
-    var userInfoTrans: Transactions!
+    var userInfoTrans = Transactions()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
-        
         
     }
     
@@ -43,7 +43,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        userInfoTrans.downloadUserDetails { () -> () in
+            
+        }
         
         }
 
@@ -59,6 +61,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func navigateToUserProfile(sender: AnyObject) {
     }
     @IBAction func navigateToCharts(sender: AnyObject) {
+        
+        performSegueWithIdentifier("showChartView", sender: nil)
     }
     @IBAction func okayAlertPopup(sender: AnyObject) {
     }

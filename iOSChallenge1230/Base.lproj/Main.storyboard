@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="8OJ-AV-K38">
             <objects>
-                <viewController id="Msc-ol-Fjg" customClass="ViewController" customModule="iOSChallenge1230" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="Msc-ol-Fjg" customClass="ViewController" customModule="iOSChallenge1230" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yxi-Ul-ckv"/>
                         <viewControllerLayoutGuide type="bottom" id="FmA-4h-DzY"/>
@@ -387,6 +387,7 @@
                     <connections>
                         <outlet property="searchBar" destination="sK9-VB-7RU" id="Ff5-Ah-i3D"/>
                         <outlet property="tableView" destination="AoF-eO-Ieh" id="7ah-rl-iyC"/>
+                        <segue destination="pOU-6I-btb" kind="show" identifier="showChartView" id="chA-MN-SxM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTC-Sh-386" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -396,7 +397,7 @@
         <!--Chart View Controller-->
         <scene sceneID="TP4-OI-uqQ">
             <objects>
-                <viewController id="pOU-6I-btb" customClass="ChartViewController" customModule="iOSChallenge1230" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="pOU-6I-btb" customClass="ChartViewController" customModule="iOSChallenge1230" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5mq-cl-KvY"/>
                         <viewControllerLayoutGuide type="bottom" id="RHY-rM-YcF"/>
@@ -590,13 +591,13 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="ejj-Wx-EUz" firstAttribute="leading" secondItem="9up-m3-fwR" secondAttribute="leadingMargin" constant="103" id="5Lu-gh-i5t"/>
+                                    <constraint firstItem="ejj-Wx-EUz" firstAttribute="leading" secondItem="9up-m3-fwR" secondAttribute="leadingMargin" constant="10" id="5Lu-gh-i5t"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="zsv-5n-n81" secondAttribute="trailing" constant="119" id="5Yh-N0-34q"/>
                                     <constraint firstItem="zsv-5n-n81" firstAttribute="top" secondItem="9up-m3-fwR" secondAttribute="topMargin" id="MeM-mg-3Ab"/>
                                     <constraint firstItem="ejj-Wx-EUz" firstAttribute="top" secondItem="zsv-5n-n81" secondAttribute="bottom" constant="8" id="XGZ-bX-Bcp"/>
                                     <constraint firstItem="zsv-5n-n81" firstAttribute="leading" secondItem="9up-m3-fwR" secondAttribute="leading" constant="68" id="blf-Zl-OXt"/>
                                     <constraint firstItem="oJp-W1-pfR" firstAttribute="top" secondItem="ejj-Wx-EUz" secondAttribute="bottom" constant="16" id="g98-0K-scU"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="ejj-Wx-EUz" secondAttribute="trailing" constant="103" id="gNh-SS-nzZ"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="ejj-Wx-EUz" secondAttribute="trailing" constant="10" id="gNh-SS-nzZ"/>
                                     <constraint firstItem="zsv-5n-n81" firstAttribute="leading" secondItem="9up-m3-fwR" secondAttribute="leadingMargin" constant="119" id="j1w-PO-NbO"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="oJp-W1-pfR" secondAttribute="bottom" constant="17" id="nFj-iS-GUd"/>
                                     <constraint firstItem="oJp-W1-pfR" firstAttribute="leading" secondItem="9up-m3-fwR" secondAttribute="leadingMargin" constant="61" id="p6e-sU-dy7"/>
@@ -641,11 +642,12 @@
                         <outlet property="chartNumberThree" destination="NSJ-1K-wSd" id="PKF-t4-Wqd"/>
                         <outlet property="chartNumberTwo" destination="2ny-0D-yS7" id="wNb-Ob-1dX"/>
                         <outlet property="pieChartViewOne" destination="ejj-Wx-EUz" id="wdp-Qc-o43"/>
+                        <segue destination="Msc-ol-Fjg" kind="show" identifier="returnToDash" id="4KM-Gl-KK3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muH-Jd-nF5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="-26"/>
+            <point key="canvasLocation" x="207" y="-29"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Dfl-kp-3vN">

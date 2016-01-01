@@ -79,13 +79,10 @@ class Transactions {
         return _profileImage
     }
     
-    init(notifications: Int) {
-        _notifications = notifications
-    }
     
     func downloadUserDetails(completed: DownloadComplete) {
         
-        let getUserParams = [ "method": "chart", //"id":2
+        let getUserParams = [ "method": "chart" //"id":2
         ]
         
 //        Alamofire.request(.POST, "https://www.thesoloconnection.com/demo/", parameters: getUserParams)
