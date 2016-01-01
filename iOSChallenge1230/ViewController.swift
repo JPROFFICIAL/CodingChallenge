@@ -12,6 +12,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var yesNoPopupView: UIView!
+    @IBOutlet weak var exitBtn: UIButton!
+    @IBOutlet weak var exitBtnTwo: UIButton!
+    @IBOutlet weak var scrollViewPopupView: UIView!
+    @IBOutlet weak var exitScrollViewBtn: UIButton!
     
     var transactions = [Transactions]()
     var inSearchMode = false
@@ -26,6 +31,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         searchBar.delegate = self
         
+        userInfoTrans.downloadChartDetails { () -> () in
+            
+        }
+        
     }
     
 
@@ -37,40 +46,54 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("transactionCell", forIndexPath: indexPath) as? TransactionCell {
          
+            
             return cell
         }
         return UITableViewCell()
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        userInfoTrans.downloadUserDetails { () -> () in
-            
+        
+        userInfoTrans.downloadChartDetails { () -> () in
+            print(self.userInfoTrans.chartNames)
         }
         
         }
 
-    
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 4
+        return 2
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3 //WILL CHANGE WHEN SWITCH EXTRA=1 IS ON
     }
     @IBAction func navigateToUserProfile(sender: AnyObject) {
+        
+        performSegueWithIdentifier("navigateToProfile", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
     }
     @IBAction func navigateToCharts(sender: AnyObject) {
         
         performSegueWithIdentifier("showChartView", sender: nil)
     }
     @IBAction func okayAlertPopup(sender: AnyObject) {
+        yesNoPopupView.hidden = false
     }
     @IBAction func scrollAlertPopup(sender: AnyObject) {
+        scrollViewPopupView.hidden = false
     }
     @IBAction func changeCellDirection(sender: AnyObject) {
     }
     @IBAction func addExtraTableViewCell(sender: AnyObject) {
+    }
+    @IBAction func exitScrollViewBtnClicked(sender: AnyObject) {
+        scrollViewPopupView.hidden = true
+    }
+    @IBAction func exitYesNoViewBtnClicked(sender: AnyObject) {
+        yesNoPopupView.hidden = true
     }
     
 }

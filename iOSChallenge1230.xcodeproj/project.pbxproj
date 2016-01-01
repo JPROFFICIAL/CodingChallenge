@@ -17,6 +17,9 @@
 		AB5E2B201C34978A004A4479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5E2B1E1C34978A004A4479 /* Main.storyboard */; };
 		AB5E2B221C34978A004A4479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5E2B211C34978A004A4479 /* Assets.xcassets */; };
 		AB5E2B251C34978A004A4479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5E2B231C34978A004A4479 /* LaunchScreen.storyboard */; };
+		ABA3F3961C3630AA001431D0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3F3951C3630AA001431D0 /* ProfileViewController.swift */; };
+		ABA3F3981C37450D001431D0 /* Login Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3F3971C37450D001431D0 /* Login Screen.swift */; };
+		ABA3F39A1C3746BE001431D0 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA3F3991C3746BE001431D0 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		AB5E2B211C34978A004A4479 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB5E2B241C34978A004A4479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB5E2B261C34978A004A4479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABA3F3951C3630AA001431D0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		ABA3F3971C37450D001431D0 /* Login Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Login Screen.swift"; sourceTree = "<group>"; };
+		ABA3F3991C3746BE001431D0 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		CF575E8A058DDFFFEFAFF54F /* Pods-iOSChallenge1230.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSChallenge1230.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSChallenge1230/Pods-iOSChallenge1230.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				AB2184881C35D5040051BF30 /* Transaction.swift */,
+				ABA3F3991C3746BE001431D0 /* GradientView.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -69,6 +76,8 @@
 			children = (
 				AB5E2B1C1C34978A004A4479 /* ViewController.swift */,
 				AB21848C1C35F66C0051BF30 /* ChartViewController.swift */,
+				ABA3F3951C3630AA001431D0 /* ProfileViewController.swift */,
+				ABA3F3971C37450D001431D0 /* Login Screen.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -258,8 +267,11 @@
 				AB5E2B1B1C34978A004A4479 /* AppDelegate.swift in Sources */,
 				AB2184871C35D4AA0051BF30 /* Constants.swift in Sources */,
 				AB21848B1C35DC060051BF30 /* TransactionCell.swift in Sources */,
+				ABA3F3961C3630AA001431D0 /* ProfileViewController.swift in Sources */,
 				AB2184891C35D5040051BF30 /* Transaction.swift in Sources */,
+				ABA3F3981C37450D001431D0 /* Login Screen.swift in Sources */,
 				AB21848D1C35F66C0051BF30 /* ChartViewController.swift in Sources */,
+				ABA3F39A1C3746BE001431D0 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

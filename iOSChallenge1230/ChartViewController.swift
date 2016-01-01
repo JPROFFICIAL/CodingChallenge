@@ -31,16 +31,17 @@ class ChartViewController: UIViewController {
     @IBOutlet weak var chartColorFour: UIView!
     @IBOutlet weak var chartColorFive: UIView!
     
+    var userInfoTrans = Transactions()
+//    var userNumbers:[Int] = []
+    var userNumbers = [34.0, 45.0, 32.0, 45.0, 32.0]
     
     override func viewDidLoad() {
         
-        let userNumbers = [32.0,43.0,21.0,12.0,10.0]
+        
         
         setChart(userNumbers)
         pieChartViewOne.animate(xAxisDuration: 1.5)
-        pieChartViewOne.centerText = "Add Num"
-        
-        
+        pieChartViewOne.centerText = "198"
         
         let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: "goBackSwipe:")
         edgePan.edges = .Left
@@ -48,6 +49,58 @@ class ChartViewController: UIViewController {
         view.addGestureRecognizer(edgePan)
 
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        userInfoTrans.downloadChartDetails { () -> () in
+            
+//            self.chartNameOne.text = self.userInfoTrans.chartNames[0]
+//            self.chartNumberOne.text = "\(self.userInfoTrans.chartAmount[0])"
+////            self.userNumbers.append(self.userInfoTrans.chartAmount[0])
+//            
+//            if self.userInfoTrans.chartNames[1] != "" {
+//            self.chartNameTwo.text = self.userInfoTrans.chartNames[1]
+//            self.chartNumberTwo.text = "\(self.userInfoTrans.chartAmount[1])"
+////            self.userNumbers.append(self.userInfoTrans.chartAmount[1])
+//                
+//            } else {
+//                self.chartNameTwo.hidden = true
+//                self.chartColorTwo.hidden = true
+//                self.chartNumberTwo.hidden = true
+//            }
+//            
+//            if self.userInfoTrans.chartNames[2] != "" {
+//                self.chartNameThree.text = self.userInfoTrans.chartNames[2]
+//                self.chartNumberThree.text = "\(self.userInfoTrans.chartAmount[2])"
+////                self.userNumbers.append(self.userInfoTrans.chartAmount[2])
+//            } else {
+//                self.chartNameThree.hidden = true
+//                self.chartColorThree.hidden = true
+//                self.chartNumberThree.hidden = true
+//            }
+//
+//            if self.userInfoTrans.chartNames[3] != "" {
+//                self.chartNameFour.text = self.userInfoTrans.chartNames[3]
+//                self.chartNumberFour.text = "\(self.userInfoTrans.chartAmount[3])"
+////                self.userNumbers.append(self.userInfoTrans.chartAmount[3])
+//            } else {
+//                self.chartNameFour.hidden = true
+//                self.chartColorFour.hidden = true
+//                self.chartNumberFour.hidden = true
+//            }
+//
+//            if self.userInfoTrans.chartNames[4] != "" {
+//                self.chartNameFive.text = self.userInfoTrans.chartNames[4]
+//                self.chartNumberFive.text = "\(self.userInfoTrans.chartAmount[4])"
+////                self.userNumbers.append(self.userInfoTrans.chartAmount[4])
+//            } else {
+//                self.chartNameFive.hidden = true
+//                self.chartColorFive.hidden = true
+//                self.chartNumberFive.hidden = true
+//            }
+
+        }
     }
     
     func goBackSwipe(recognizer: UIScreenEdgePanGestureRecognizer) {
