@@ -8,20 +8,70 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var transactions = [Transactions]()
+    var inSearchMode = false
+    var filteredTransactions = [Transactions]()
+    var userInfoTrans: Transactions!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        searchBar.delegate = self
+        
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCellWithIdentifier("transactionCell", forIndexPath: indexPath) as? TransactionCell {
+         
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        }
+
+    
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 4
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3 //WILL CHANGE WHEN SWITCH EXTRA=1 IS ON
+    }
+    @IBAction func navigateToUserProfile(sender: AnyObject) {
+    }
+    @IBAction func navigateToCharts(sender: AnyObject) {
+    }
+    @IBAction func okayAlertPopup(sender: AnyObject) {
+    }
+    @IBAction func scrollAlertPopup(sender: AnyObject) {
+    }
+    @IBAction func changeCellDirection(sender: AnyObject) {
+    }
+    @IBAction func addExtraTableViewCell(sender: AnyObject) {
+    }
+    
+}
     
 
 
-}
+
 

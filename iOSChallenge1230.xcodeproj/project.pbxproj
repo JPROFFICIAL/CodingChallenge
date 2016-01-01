@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3DE34F0CE749C7C9856915F6 /* Pods_iOSChallenge1230.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59B7A1F7760C4C11CC484E0 /* Pods_iOSChallenge1230.framework */; };
+		AB2184871C35D4AA0051BF30 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2184861C35D4A90051BF30 /* Constants.swift */; };
+		AB2184891C35D5040051BF30 /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2184881C35D5040051BF30 /* DataFile.swift */; };
+		AB21848B1C35DC060051BF30 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB21848A1C35DC060051BF30 /* TransactionCell.swift */; };
+		AB21848D1C35F66C0051BF30 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB21848C1C35F66C0051BF30 /* ChartViewController.swift */; };
 		AB5E2B1B1C34978A004A4479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5E2B1A1C34978A004A4479 /* AppDelegate.swift */; };
 		AB5E2B1D1C34978A004A4479 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5E2B1C1C34978A004A4479 /* ViewController.swift */; };
 		AB5E2B201C34978A004A4479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5E2B1E1C34978A004A4479 /* Main.storyboard */; };
@@ -18,6 +22,10 @@
 /* Begin PBXFileReference section */
 		1844C27A999BF3B6DA43268F /* Pods-iOSChallenge1230.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSChallenge1230.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSChallenge1230/Pods-iOSChallenge1230.debug.xcconfig"; sourceTree = "<group>"; };
 		A59B7A1F7760C4C11CC484E0 /* Pods_iOSChallenge1230.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSChallenge1230.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB2184861C35D4A90051BF30 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AB2184881C35D5040051BF30 /* DataFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFile.swift; sourceTree = "<group>"; };
+		AB21848A1C35DC060051BF30 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		AB21848C1C35F66C0051BF30 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		AB5E2B171C34978A004A4479 /* iOSChallenge1230.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSChallenge1230.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5E2B1A1C34978A004A4479 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB5E2B1C1C34978A004A4479 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +48,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB2184821C35D4230051BF30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB2184881C35D5040051BF30 /* DataFile.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AB2184831C35D4270051BF30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB5E2B1E1C34978A004A4479 /* Main.storyboard */,
+				AB5E2B231C34978A004A4479 /* LaunchScreen.storyboard */,
+				AB21848A1C35DC060051BF30 /* TransactionCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AB2184841C35D42B0051BF30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AB5E2B1C1C34978A004A4479 /* ViewController.swift */,
+				AB21848C1C35F66C0051BF30 /* ChartViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AB2184851C35D4450051BF30 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AB2184861C35D4A90051BF30 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		AB31C0E287143C84056F4E31 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,11 +113,12 @@
 		AB5E2B191C34978A004A4479 /* iOSChallenge1230 */ = {
 			isa = PBXGroup;
 			children = (
+				AB2184841C35D42B0051BF30 /* Controller */,
+				AB2184831C35D4270051BF30 /* View */,
+				AB2184821C35D4230051BF30 /* Model */,
+				AB2184851C35D4450051BF30 /* Util */,
 				AB5E2B1A1C34978A004A4479 /* AppDelegate.swift */,
-				AB5E2B1C1C34978A004A4479 /* ViewController.swift */,
-				AB5E2B1E1C34978A004A4479 /* Main.storyboard */,
 				AB5E2B211C34978A004A4479 /* Assets.xcassets */,
-				AB5E2B231C34978A004A4479 /* LaunchScreen.storyboard */,
 				AB5E2B261C34978A004A4479 /* Info.plist */,
 			);
 			path = iOSChallenge1230;
@@ -212,6 +256,10 @@
 			files = (
 				AB5E2B1D1C34978A004A4479 /* ViewController.swift in Sources */,
 				AB5E2B1B1C34978A004A4479 /* AppDelegate.swift in Sources */,
+				AB2184871C35D4AA0051BF30 /* Constants.swift in Sources */,
+				AB21848B1C35DC060051BF30 /* TransactionCell.swift in Sources */,
+				AB2184891C35D5040051BF30 /* DataFile.swift in Sources */,
+				AB21848D1C35F66C0051BF30 /* ChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
